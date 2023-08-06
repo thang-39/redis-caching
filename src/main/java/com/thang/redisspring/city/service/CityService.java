@@ -49,7 +49,7 @@ public class CityService {
                 .onErrorResume(ex -> cityClient.getCity(zipcode));
     }
 
-    @Scheduled(fixedRate = 10_1000)
+//    @Scheduled(fixedRate = 10_1000)
     public void updateCity() {
         cityClient.getAllCities()
                 .collectList()
